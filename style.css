@@ -18,6 +18,10 @@ body {
   background: lightgreen;
 }
 
+#m2 {
+  background: white;
+}
+
 .chulo {
   border: 2px solid black;
   border-radius: 12px;
