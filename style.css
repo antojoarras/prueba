@@ -1,3 +1,16 @@
 body {
   background: lightgreen;
 }
+
+#titulo {
+  background: lightblue;
+}
+
+#general {
+  background: darkblue;
+}
+
+.chulo {
+  border: 2px solid black;
+  border-radius: 12px;
+}
