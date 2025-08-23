@@ -7,7 +7,15 @@ body {
 }
 
 #general {
-  background: darkblue;
+  background: yellow;
+}
+
+#contenido {
+  background: purple;
+}
+
+#m1 {
+  background: lightgreen;
 }
 
 .chulo {
