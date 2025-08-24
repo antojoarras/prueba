@@ -82,3 +82,27 @@ p {
   border: 2px solid black;
   border-radius: 12px;
 }
+
+/* -------- RESPONSIVE PARA MÓVILES -------- */
+@media (max-width: 768px) {
+  #contenido {
+    grid-template-columns: 1fr;   /* una sola columna */
+  }
+
+  #m1, #m2, #m3, #m4 {
+    flex-direction: column;       /* texto arriba, imagen abajo */
+    text-align: center;
+  }
+
+  .img-box {
+    margin-top: 10px;            /* espacio entre texto e imagen */
+    width: 100%;
+    height: auto;
+  }
+
+  .img-box img {
+    max-width: 200px;            /* límite de tamaño en móvil */
+    width: 100%;
+    height: auto;
+  }
+}
