@@ -1,34 +1,41 @@
 body {
-  background: lightgreen;
-}
-
-#titulo {
-  background: lightblue;
+  background: #f4ffe0;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin: 0;
 }
 
 #general {
-  background: yellow;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #fffbe7;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#titulo {
+  background: #a7d0f2;
+  text-align: center;
+  padding: 15px;
 }
 
 #contenido {
-  background: purple;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  background: none;
 }
 
-#m1 {
-  background: lightgreen;
+#m1, #m2, #m3, #m4 {
+  background: #e8ffe3;
+  padding: 15px;
+  transition: transform 0.2s ease;
 }
 
-#m2 {
-  background: red;
+#m1:hover, #m2:hover, #m3:hover, #m4:hover {
+  transform: scale(1.05);
+  background: #d0f7cc;
 }
 
-#m3 {
-  background: darkgreen;
-}
-
-#m4 {
-  background: cyan;
-}
 
 .chulo {
   border: 2px solid black;
@@ -37,4 +44,14 @@ body {
 
 * {
   padding: 2%;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+}
+
+p {
+  font-size: 1em;
+  color: #333;
 }
