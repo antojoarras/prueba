@@ -16,19 +16,23 @@ body {
   background: #a7d0f2;
   text-align: center;
   padding: 15px;
+  border-radius: 12px;
 }
 
 #contenido {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  background: none;
+  margin-top: 15px;
 }
 
 #m1, #m2, #m3, #m4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #e8ffe3;
   padding: 15px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 #m1:hover, #m2:hover, #m3:hover, #m4:hover {
@@ -36,14 +40,15 @@ body {
   background: #d0f7cc;
 }
 
-
-.chulo {
-  border: 2px solid black;
-  border-radius: 12px;
+#m1 img, #m2 img, #m3 img, #m4 img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
-* {
-  padding: 2%;
+#m1:hover img, #m2:hover img, #m3:hover img, #m4:hover img {
+  transform: scale(1.2);
 }
 
 h1 {
@@ -54,4 +59,9 @@ h1 {
 p {
   font-size: 1em;
   color: #333;
+}
+
+.chulo {
+  border: 2px solid black;
+  border-radius: 12px;
 }
