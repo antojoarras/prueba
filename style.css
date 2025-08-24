@@ -32,7 +32,7 @@ body {
   align-items: center;
   background: #e8ffe3;
   padding: 15px;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 #m1:hover, #m2:hover, #m3:hover, #m4:hover {
@@ -44,7 +44,7 @@ body {
   width: 120px;
   height: auto;
   border-radius: 8px;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 #m1:hover img, #m2:hover img, #m3:hover img, #m4:hover img {
