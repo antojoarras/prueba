@@ -2,11 +2,10 @@ body {
   background: #f4ffe0;
   font-family: 'Trebuchet MS', sans-serif;
   margin: 0;
-
   display: flex;
-  justify-content: center;   /* centro horizontal */
-  align-items: center;       /* centro vertical */
-  min-height: 100vh;         /* ocupa toda la ventana */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 #general {
@@ -31,21 +30,21 @@ body {
   margin-top: 15px;
 }
 
-#m1, #m2, #m3, #m4 {
+.monster {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #e8ffe3;
   padding: 15px;
+  cursor: pointer;
+  position: relative;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-#m1:hover, #m2:hover, #m3:hover, #m4:hover {
-  transform: scale(1.05);
+.monster:hover {
   background: #d0f7cc;
 }
 
-/* Caja de imagen reservada */
 .img-box {
   width: 140px;
   height: 140px;
@@ -61,16 +60,48 @@ body {
   transition: transform 0.2s ease;
 }
 
-#m1:hover .img-box img,
-#m2:hover .img-box img,
-#m3:hover .img-box img,
-#m4:hover .img-box img {
+.monster:hover .img-box img {
   transform: scale(1.2);
+}
+
+.extra {
+  display: none;
+  flex-direction: column;
+  margin-top: 15px;
+  padding: 10px;
+  background: #fff0c2;
+  border-radius: 8px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+  animation: showExtra 0.3s ease;
+}
+
+@keyframes showExtra {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.monster.active {
+  transform: scale(1.05);
+  background: #ffeaa7;
+}
+
+.monster.active .extra {
+  display: flex;
 }
 
 h1 {
   font-size: 1.5em;
   margin-bottom: 0.3em;
+}
+
+.extra h2 {
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
 }
 
 p {
@@ -83,26 +114,20 @@ p {
   border-radius: 12px;
 }
 
-/* -------- RESPONSIVE PARA MÓVILES -------- */
 @media (max-width: 768px) {
   #contenido {
-    grid-template-columns: 1fr;   /* una sola columna */
+    grid-template-columns: 1fr;
   }
-
-  #m1, #m2, #m3, #m4 {
-    flex-direction: column;       /* texto arriba, imagen abajo */
+  .monster {
+    flex-direction: column;
     text-align: center;
   }
-
   .img-box {
-    margin-top: 10px;            /* espacio entre texto e imagen */
+    margin-top: 10px;
     width: 100%;
     height: auto;
   }
-
   .img-box img {
-    max-width: 200px;            /* límite de tamaño en móvil */
-    width: 100%;
-    height: auto;
+    max-width: 200px;
   }
 }
