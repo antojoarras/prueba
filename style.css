@@ -39,6 +39,7 @@ body {
   cursor: pointer;
   position: relative;
   transition: transform 0.2s ease, background 0.2s ease;
+  flex-wrap: wrap;
 }
 
 .monster:hover {
@@ -71,22 +72,17 @@ body {
   padding: 10px;
   background: #fff0c2;
   border-radius: 8px;
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 10;
+  grid-column: span 2; /* ocupa toda la fila en el grid */
   animation: showExtra 0.3s ease;
 }
 
 @keyframes showExtra {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .monster.active {
-  transform: scale(1.05);
+  transform: scale(1.02);
   background: #ffeaa7;
 }
 
@@ -129,5 +125,8 @@ p {
   }
   .img-box img {
     max-width: 200px;
+  }
+  .extra {
+    grid-column: span 1; /* en móvil solo ocupa su columna */
   }
 }
