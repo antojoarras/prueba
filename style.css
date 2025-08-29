@@ -100,6 +100,14 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+.extra img {
+  max-width: 100%;   /* no se pasa del ancho del contenedor */
+  max-height: 250px; /* ajusta a lo que quieras, por ejemplo 250px */
+  object-fit: contain;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
 p {
   font-size: 1em;
   color: #333;
